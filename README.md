@@ -1,4 +1,4 @@
-# freecodecamp-exercises
+# freecodecamp-projects
 
 A collection of exercises and projects completed from [freeCodeCamp.org](https://www.freecodecamp.org/). This repository documents my learning journey through various coding challenges, projects, and certifications offered by freeCodeCamp.
 
@@ -19,10 +19,14 @@ freecodecamp-exercises/
 │-- javascript-algorithms-data-structures/
 │-- front-end-libraries/
 │-- data-visualization/
+│-- relational-database/
 │-- backend-development-apis/
 │-- quality-assurance/
 │-- scientific-computing-python/
+│-- data-analysis-python/
+│-- information-security/
 │-- machine-learning-python/
+│-- college-algebra-python/
 │-- README.md
 ```
 Each folder contains exercises, mini-projects, and solutions categorized by their respective topics.
@@ -30,7 +34,7 @@ Each folder contains exercises, mini-projects, and solutions categorized by thei
 ## 🚀 How to Use
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/freecodecamp-exercises.git
+   git clone https://github.com/your-username/freecodecamp-projects.git
    ```
 2. Navigate to a section:
    ```sh
