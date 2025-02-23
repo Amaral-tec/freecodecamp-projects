@@ -2,7 +2,7 @@
 
 namespace FreeCodeCampApp.Controllers
 {
-    public class ProjectsController : Controller
+    public class ResponsiveWebDesignController : Controller
     {
         public IActionResult Index()
         {
