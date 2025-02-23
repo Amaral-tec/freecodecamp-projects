@@ -7,10 +7,14 @@ A collection of exercises and projects completed from [freeCodeCamp.org](https:/
 - **JavaScript Algorithms and Data Structures**
 - **Front End Development Libraries**
 - **Data Visualization**
+- **Relational Database**
 - **Back End Development and APIs**
 - **Quality Assurance**
 - **Scientific Computing with Python**
+- **Data Analysis with Python**
+- **Information Security**
 - **Machine Learning with Python**
+- **College Algebra with Python**
 
 ## 📂 Repository Structure
 ```
@@ -34,7 +38,7 @@ Each folder contains exercises, mini-projects, and solutions categorized by thei
 ## 🚀 How to Use
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/freecodecamp-projects.git
+   git clone https://github.com/amaral-tec/freecodecamp-projects.git
    ```
 2. Navigate to a section:
    ```sh
