@@ -1,0 +1,37 @@
+﻿@*
+    https://codeseven.github.io/toastr/
+*@
+@{
+    var messageType = TempData["success"] != null ? "success" :
+                     TempData["error"] != null ? "error" :
+                     TempData["info"] != null ? "info" :
+                     TempData["warning"] != null ? "warning" : null;
+
+    var messageContent = TempData["success"] ?? TempData["error"] ?? TempData["info"] ?? TempData["warning"];
+}
+
+@if (messageType != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            toastr.options.progressBar = true;
+
+            switch ('@messageType') {
+                case "success":
+                    toastr.success('@messageContent');
+                    break;
+                case "error":
+                    toastr.error('@messageContent');
+                    break;
+                case "info":
+                    toastr.info('@messageContent');
+                    break;
+                case "warning":
+                    toastr.warning('@messageContent');
+                    break;
+            }
+        });
+    </script>
+}
