@@ -21,6 +21,7 @@ namespace FreeCodeCampApp.Controllers
                 5 => PartialView("_SurveyForm"),
                 6 => PartialView("_RothkoPainting"),
                 7 => PartialView("_PhotoGallery"),
+                8 => PartialView("_NutritionLabel"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }
