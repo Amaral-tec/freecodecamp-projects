@@ -18,6 +18,8 @@ namespace FreeCodeCampApp.Controllers
                 2 => PartialView("_CafeMenu"),
                 3 => PartialView("_SetOfColoredMarkers"),
                 4 => PartialView("_RegistrationForm"),
+                5 => PartialView("_SurveyForm"),
+                6 => PartialView("_RothkoPainting"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }

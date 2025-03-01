@@ -20,24 +20,30 @@
                     <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(4)">Learn HTML Forms by Building a Registration Form</button>
                     <button type="button" class="list-group-item list-group-item-action list-group-item-info" onclick="OpenProject(5)">Certification Project: Survey Form</button>
 
-                    @* <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(6)">Learn the CSS Box Model by Building a Rothko Painting</button>
-                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(7)">Learn CSS Flexbox by Building a Photo Gallery</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(6)">Learn the CSS Box Model by Building a Rothko Painting</button>
+                    @* <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(7)">Learn CSS Flexbox by Building a Photo Gallery</button>
                     <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(8)">Learn Typography by Building a Nutrition Label</button>
-                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(9)">Learn Accessibility by Building a Quiz</button>
-                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(10)">Certification Project: Tribute Page</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(9)">Learn Accessibility by Building a Quiz</button> *@
+                    <a type="button" class="list-group-item list-group-item-action list-group-item-info" href="https://amaral-tec.github.io/responsive-tribute-page-template/" target="_blank">
+                        Certification Project: Tribute Page
+                    </a>
 
 
-                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(11)">Learn More About CSS Pseudo Selectors by Building A Balance Sheet</button>
+                    @* <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(11)">Learn More About CSS Pseudo Selectors by Building A Balance Sheet</button>
                     <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(12)">Learn Intermediate CSS by Building a Cat Painting</button>
-                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(13)">Learn Responsive Web Design by Building a Piano</button>
-                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(14)">Certification Project: Technical Documentation Page</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(13)">Learn Responsive Web Design by Building a Piano</button> *@
+                    <a type="button" class="list-group-item list-group-item-action list-group-item-info" href="https://amaral-tec.github.io/responsive-technical-documentation-page-template/" target="_blank">
+                        Certification Project: Technical Documentation Page
+                    </a>
 
 
-                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(15)">Learn CSS Variables by Building a City Skyline</button>
-                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(16)">Learn CSS Grid by Building a Magazine</button>
-                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(17)">Certification Project: Product Landing Page</button>
+                    @* <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(15)">Learn CSS Variables by Building a City Skyline</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(16)">Learn CSS Grid by Building a Magazine</button> *@
+                    <a type="button" class="list-group-item list-group-item-action list-group-item-info" href="https://amaral-tec.github.io/responsive-product-landing-page-template/" target="_blank">
+                        Certification Project: Product Landing Page
+                    </a>
 
-                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(18)">Learn CSS Animation by Building a Ferris Wheel</button>
+                    @* <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(18)">Learn CSS Animation by Building a Ferris Wheel</button>
                     <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(19)">Learn CSS Transforms by Building a Penguin</button>
                     <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject(20)">Certification Project: Personal Portfolio Webpage</button> *@
                 </div>
@@ -63,7 +69,7 @@
             url: '/ResponsiveWebDesign/OpenProject?id=' + id,
             success: function (data) {
                 $modal = $("#projectModal");
-                
+
                 $modal.find('.modal-content').html(data);
 
                 $modal.modal("show");

@@ -1,0 +1,212 @@
+﻿<div class="modal-header">
+    <h5 class="modal-title" id="projectSurveyForm">Build a Survey Form</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body custom-survey-form">
+    <div class="container">
+        <h1 id="title">Car Rental Form</h1>
+        <p id="description">Welcome to XYZ Car Rentals, your trusted partner for all your car rental needs. Whether you need a compact car for a quick city trip or a luxury SUV for your family vacation, we've got you covered. Our easy-to-use form makes it simple to book the perfect car for your journey.</p>
+        <form id="survey-form" action="submit.php" method="post">
+            <div class="form-group-survey-form">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group-survey-form">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group-survey-form">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group-survey-form">
+                <label for="pickupDate">Pickup Date</label>
+                <input type="date" id="pickupDate" name="pickupDate" value="@DateTime.Now.ToString("yyyy-MM-dd")" required>
+            </div>
+            <div class="form-group-survey-form">
+                <label for="returnDate">Return Date</label>
+                <input type="date" id="returnDate" name="returnDate" value="@DateTime.Now.AddDays(2).ToString("yyyy-MM-dd")" required>
+            </div>
+            <div class="form-group-survey-form">
+                <label for="carType">Car Type</label>
+                <select id="dropdown" name="carType">
+                    <option value="compact">Compact</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="suv">SUV</option>
+                    <option value="luxury">Luxury</option>
+                </select>
+            </div>
+            <div class="form-group-survey-form">
+                <label id="number-label" for="number">Number of passengers (1-5)</label>
+                <input type="number" id="number" name="number" min="1" max="5" placeholder="Enter number of passengers" required>
+            </div>
+            <div class="form-group-survey-form">
+                <label for="carFeatures">Car Features</label>
+                <div>
+                    <label>
+                        <input type="radio" name="carFeatures" value="gps"> GPS
+                    </label>
+                    <label>
+                        <input type="radio" name="carFeatures" value="wifi"> Wi-Fi
+                    </label>
+                    <label>
+                        <input type="radio" name="carFeatures" value="sunroof"> Sunroof
+                    </label>
+                </div>
+            </div>
+            <div class="form-group-survey-form">
+                <label for="additionalServices">Additional Services</label>
+                <div>
+                    <label>
+                        <input type="checkbox" name="additionalServices" value="insurance"> Insurance
+                    </label>
+                    <label>
+                        <input type="checkbox" name="additionalServices" value="babySeat"> Baby Seat
+                    </label>
+                    <label>
+                        <input type="checkbox" name="additionalServices" value="petFriendly"> Pet-Friendly
+                    </label>
+                </div>
+            </div>
+            <div class="form-group-survey-form">
+                <label for="additionalInfo">Additional Info</label>
+                <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
+            </div>
+            <div class="form-group-survey-form">
+                <label for="termsAgreement">
+                    <input type="checkbox" id="termsAgreement" name="termsAgreement" value="termsAgreement" required>
+                    I agree to the terms and conditions
+                </label>
+            </div>
+            <div class="form-group-survey-form">
+                <input id="submit" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+   .custom-survey-form {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    margin: 30px auto;
+}
+
+.custom-survey-form h1 {
+    text-align: center;
+    color: #333;
+}
+
+.custom-survey-form p {
+    text-align: justify;
+    color: #555;
+    font-size: 14px;
+}
+
+.form-group-survey-form {
+    margin-bottom: 15px;
+}
+
+.custom-survey-form label {
+    display: block;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.custom-survey-form input[type="text"],
+.custom-survey-form input[type="email"],
+.custom-survey-form input[type="tel"],
+.custom-survey-form input[type="date"],
+.custom-survey-form input[type="number"],
+.custom-survey-form select,
+.custom-survey-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-survey-form input:focus,
+.custom-survey-form select:focus,
+.custom-survey-form textarea:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+.custom-survey-form select {
+    cursor: pointer;
+}
+
+.custom-survey-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.custom-survey-form input[type="radio"],
+.custom-survey-form input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.custom-survey-form div input[type="radio"] + label,
+.custom-survey-form div input[type="checkbox"] + label {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.custom-survey-form input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    width: 100%;
+}
+
+.custom-survey-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.custom-survey-form .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+}
+
+.custom-survey-form .modal-header h5 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.custom-survey-form .modal-header .btn-close {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.custom-survey-form .modal-header .btn-close:hover {
+    opacity: 0.7;
+}
+
+</style>
