@@ -12,13 +12,14 @@ namespace FreeCodeCampApp.Controllers
         [HttpGet]
         public IActionResult OpenProject(int id)
         {
-            if (id == 1)
+            return id switch
             {
-                return PartialView("_LearnHTMLbyBuildingaCatPhotoApp");
-            }
-
-            return Json(new { error = true, mensagem = "Project not found!" });
+                1 => PartialView("_CatPhotoApp"),
+                2 => PartialView("_CafeMenu"),
+                3 => PartialView("_SetOfColoredMarkers"),
+                4 => PartialView("_RegistrationForm"),
+                _ => Json(new { error = true, mensagem = "Project not found!" }),
+            };
         }
-
     }
 }
