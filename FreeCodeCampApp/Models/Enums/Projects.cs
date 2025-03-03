@@ -29,6 +29,8 @@ namespace FreeCodeCampApp.Models.Enums
         [Display(Name = "Piano")]
         Piano = 13,
         [Display(Name = "City Skyline")]
-        CitySkyline = 15
+        CitySkyline = 15,
+        [Display(Name = "Magazine")]
+        Magazine = 16
     }
 }
