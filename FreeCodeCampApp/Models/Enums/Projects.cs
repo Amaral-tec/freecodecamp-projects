@@ -23,16 +23,18 @@ namespace FreeCodeCampApp.Models.Enums
         [Display(Name = "Quiz")]
         Quiz = 9,
         [Display(Name = "Balance Sheet")]
-        BalanceSheet = 11,
+        BalanceSheet = 10,
         [Display(Name = "Cat Painting")]
-        CatPainting = 12,
+        CatPainting = 11,
         [Display(Name = "Piano")]
-        Piano = 13,
+        Piano = 12,
         [Display(Name = "City Skyline")]
-        CitySkyline = 15,
+        CitySkyline = 13,
         [Display(Name = "Magazine")]
-        Magazine = 16,
+        Magazine = 14,
         [Display(Name = "FerrisWheel")]
-        FerrisWheel = 17
+        FerrisWheel = 15,
+        [Display(Name = "Penguin")]
+        Penguin = 16
     }
 }
