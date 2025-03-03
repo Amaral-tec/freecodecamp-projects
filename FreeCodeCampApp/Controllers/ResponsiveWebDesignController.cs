@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FreeCodeCampApp.Models.Enums;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FreeCodeCampApp.Controllers
 {
@@ -10,22 +11,23 @@ namespace FreeCodeCampApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult OpenProject(int id)
+        public IActionResult OpenProject(Projects projects)
         {
-            return id switch
+            return projects switch
             {
-                1 => PartialView("_CatPhotoApp"),
-                2 => PartialView("_CafeMenu"),
-                3 => PartialView("_SetOfColoredMarkers"),
-                4 => PartialView("_RegistrationForm"),
-                5 => PartialView("_SurveyForm"),
-                6 => PartialView("_RothkoPainting"),
-                7 => PartialView("_PhotoGallery"),
-                8 => PartialView("_NutritionLabel"),
-                9 => PartialView("_Quiz"),
-                11 => PartialView("_BalanceSheet"),
-                12 => PartialView("_CatPainting"),
-                13 => PartialView("_Piano"),
+                Projects.CatPhotoApp => PartialView("_CatPhotoApp"),
+                Projects.CafeMenu => PartialView("_CafeMenu"),
+                Projects.SetOfColoredMarkers => PartialView("_SetOfColoredMarkers"),
+                Projects.RegistrationForm => PartialView("_RegistrationForm"),
+                Projects.SurveyForm => PartialView("_SurveyForm"),
+                Projects.RothkoPainting => PartialView("_RothkoPainting"),
+                Projects.PhotoGallery => PartialView("_PhotoGallery"),
+                Projects.NutritionLabel => PartialView("_NutritionLabel"),
+                Projects.Quiz => PartialView("_Quiz"),
+                Projects.BalanceSheet => PartialView("_BalanceSheet"),
+                Projects.CatPainting => PartialView("_CatPainting"),
+                Projects.Piano => PartialView("_Piano"),
+                Projects.CitySkyline => PartialView("_CitySkyline"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }
