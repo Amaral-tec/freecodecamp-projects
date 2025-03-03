@@ -29,6 +29,7 @@ namespace FreeCodeCampApp.Controllers
                 Projects.Piano => PartialView("_Piano"),
                 Projects.CitySkyline => PartialView("_CitySkyline"),
                 Projects.Magazine => PartialView("_Magazine"),
+                Projects.FerrisWheel => PartialView("_FerrisWheel"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }

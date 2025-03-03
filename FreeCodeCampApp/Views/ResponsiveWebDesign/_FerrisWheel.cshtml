@@ -1,0 +1,160 @@
+﻿<div class="modal-header">
+    <h5 class="modal-title" id="projectFerrisWheel">Learn CSS Animation by Building a Ferris Wheel</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body custom-ferris-wheel">
+    <div class="wheel-container">
+        <div class="wheel">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+
+            <div class="cabin"></div>
+            <div class="cabin"></div>
+            <div class="cabin"></div>
+            <div class="cabin"></div>
+            <div class="cabin"></div>
+            <div class="cabin"></div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .custom-ferris-wheel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .wheel-container {
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wheel {
+        border: 2px solid black;
+        border-radius: 50%;
+        position: relative;
+        height: 55vw;
+        width: 55vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .line {
+        background-color: black;
+        width: 50%;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: 0% 0%;
+    }
+
+        .line:nth-of-type(2) {
+            transform: rotate(60deg);
+        }
+
+        .line:nth-of-type(3) {
+            transform: rotate(120deg);
+        }
+
+        .line:nth-of-type(4) {
+            transform: rotate(180deg);
+        }
+
+        .line:nth-of-type(5) {
+            transform: rotate(240deg);
+        }
+
+        .line:nth-of-type(6) {
+            transform: rotate(300deg);
+        }
+
+    .cabin {
+        background-color: red;
+        width: 20%;
+        height: 20%;
+        position: absolute;
+        border: 2px solid;
+        transform-origin: 50% 0%;
+    }
+
+        .cabin:nth-of-type(1) {
+            right: -8.5%;
+            top: 50%;
+        }
+
+        .cabin:nth-of-type(2) {
+            right: 17%;
+            top: 93.5%;
+        }
+
+        .cabin:nth-of-type(3) {
+            right: 67%;
+            top: 93.5%;
+        }
+
+        .cabin:nth-of-type(4) {
+            left: -8.5%;
+            top: 50%;
+        }
+
+        .cabin:nth-of-type(5) {
+            left: 17%;
+            top: 7%;
+        }
+
+        .cabin:nth-of-type(6) {
+            right: 17%;
+            top: 7%;
+        }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("ferrisWheelModal");
+        const wheel = document.querySelector(".wheel");
+        const cabins = document.querySelectorAll(".cabin");
+
+        let angle = 0;
+        let animationFrame;
+
+        function rotateWheel() {
+            angle = (angle + 1) % 360;
+            wheel.style.transform = `rotate(${angle}deg)`;
+
+            cabins.forEach((cabin, index) => {
+                let cabinAngle = -angle + (index * 60);
+                cabin.style.transform = `rotate(${cabinAngle}deg)`;
+
+                if (angle % 100 < 25) {
+                    cabin.style.backgroundColor = "yellow";
+                } else if (angle % 100 < 50) {
+                    cabin.style.backgroundColor = "purple";
+                } else {
+                    cabin.style.backgroundColor = "red";
+                }
+            });
+
+            animationFrame = requestAnimationFrame(rotateWheel);
+        }
+
+        modal.addEventListener("shown.bs.modal", function () {
+            rotateWheel();
+        });
+
+        modal.addEventListener("hidden.bs.modal", function () {
+            cancelAnimationFrame(animationFrame);
+        });
+    });
+</script>
