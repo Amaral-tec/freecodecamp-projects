@@ -31,6 +31,7 @@ namespace FreeCodeCampApp.Controllers
                 Projects.Magazine => PartialView("_Magazine"),
                 Projects.FerrisWheel => PartialView("_FerrisWheel"),
                 Projects.Penguin => PartialView("_Penguin"),
+                Projects.PyramidGenerator => PartialView("_PyramidGenerator"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }
