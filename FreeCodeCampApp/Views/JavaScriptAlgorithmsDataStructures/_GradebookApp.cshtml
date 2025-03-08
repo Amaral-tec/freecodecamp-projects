@@ -1,0 +1,70 @@
+﻿<div class="modal-header">
+    <h5 class="modal-title" id="projectGradebookApp">Review JavaScript Fundamentals by Building a Gradebook App</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
+<div class="modal-body custom-grade-book-App">
+    <form id="gradebook-form">
+        <div class="d-flex align-items-center gap-2 mb-2">
+            <label for="student1" class="form-label mb-0">Student 1:</label>
+            <input type="number" id="student1" class="form-control w-25" min="0" max="100" required>
+        </div>
+        <div class="d-flex align-items-center gap-2 mb-2">
+            <label for="student2" class="form-label mb-0">Student 2:</label>
+            <input type="number" id="student2" class="form-control w-25" min="0" max="100" required>
+        </div>
+        <div class="d-flex align-items-center gap-2 mb-2">
+            <label for="student3" class="form-label mb-0">Student 3:</label>
+            <input type="number" id="student3" class="form-control w-25" min="0" max="100" required>
+        </div>
+        <button type="button" class="btn btn-primary mt-2" onclick="calculateGrades()">Calculate Grades</button>
+    </form>
+
+    <div id="gradebook-output" class="mt-3"></div>
+</div>
+
+<script>
+    function getAverage(scores) {
+        let sum = scores.reduce((acc, score) => acc + score, 0);
+        return (sum / scores.length).toFixed(2);
+    }
+
+    function getGrade(score) {
+        if (score === 100) return "A++";
+        if (score >= 90) return "A";
+        if (score >= 80) return "B";
+        if (score >= 70) return "C";
+        if (score >= 60) return "D";
+        return "F";
+    }
+
+    function studentMsg(totalScores, studentScore) {
+        const avg = getAverage(totalScores);
+        const grade = getGrade(studentScore);
+        const passed = grade !== "F";
+        const result = passed ? "passed" : "failed";
+        const textClass = passed ? "text-success" : "text-danger";
+
+        return `<p class="${textClass}"><strong>Class average:</strong> ${avg}. <strong>Your grade:</strong> ${grade}. You <strong>${result}</strong> the course.</p>`;
+    }
+
+    function calculateGrades() {
+        const scores = [
+            parseFloat(document.getElementById("student1").value),
+            parseFloat(document.getElementById("student2").value),
+            parseFloat(document.getElementById("student3").value)
+        ];
+
+        if (scores.some(isNaN)) {
+            alert("Please enter valid scores for all students.");
+            return;
+        }
+
+        let outputHtml = "";
+        scores.forEach((score, index) => {
+            outputHtml += `<p><strong>Student ${index + 1}:</strong> ${studentMsg(scores, score)}</p>`;
+        });
+
+        document.getElementById("gradebook-output").innerHTML = outputHtml;
+    }
+</script>

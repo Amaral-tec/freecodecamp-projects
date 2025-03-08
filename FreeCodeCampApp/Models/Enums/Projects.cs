@@ -40,7 +40,8 @@ namespace FreeCodeCampApp.Models.Enums
 
         //JavaScript Algorithms and Data Structures
         [Display(Name = "Pyramid Generator")]
-        PyramidGenerator = 17
-
+        PyramidGenerator = 17,
+        [Display(Name = "Gradebook App")]
+        GradebookApp = 18,
     }
 }

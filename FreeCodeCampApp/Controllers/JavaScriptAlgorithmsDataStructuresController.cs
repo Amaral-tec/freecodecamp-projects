@@ -11,6 +11,7 @@ namespace FreeCodeCampApp.Controllers
             return projects switch
             {
                 Projects.PyramidGenerator => PartialView("_PyramidGenerator"),
+                Projects.GradebookApp => PartialView("_GradebookApp"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }
