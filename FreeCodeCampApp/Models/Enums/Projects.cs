@@ -43,5 +43,7 @@ namespace FreeCodeCampApp.Models.Enums
         PyramidGenerator = 17,
         [Display(Name = "Gradebook App")]
         GradebookApp = 18,
+        [Display(Name = "Role Playing Game")]
+        RolePlayingGame = 19,
     }
 }

@@ -12,6 +12,7 @@ namespace FreeCodeCampApp.Controllers
             {
                 Projects.PyramidGenerator => PartialView("_PyramidGenerator"),
                 Projects.GradebookApp => PartialView("_GradebookApp"),
+                Projects.RolePlayingGame => PartialView("_RolePlayingGame"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }

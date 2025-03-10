@@ -1,39 +1,39 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - FreeCodeCampApp</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/FreeCodeCampApp.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-</head>
-<body>
-    <header id="home">
-        <div class="menu-wrap">
-            <navbar class="menu" id="navbar">
-                <div>
-                    <a asp-controller="Home" asp-action="Index"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
-                    <a href="#welcome-section"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
-                    <a href="#service"><i class="fa fa-fw fa-globe"></i><span>Service</span></a>
-                    <a asp-controller="ResponsiveWebDesign" asp-action="Index"><i class="fa fa-fw fa-code"></i><span>Projects</span></a>
-                    <a href="#contact"><i class="fa fa-fw fa-envelope"></i><span>Contact</span></a>
-                </div>
-            </navbar>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - FreeCodeCampApp</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/FreeCodeCampApp.styles.css" asp-append-version="true" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    </head>
+    <body>
+        <header id="home">
+            <div class="menu-wrap">
+                <navbar class="menu" id="navbar">
+                    <div>
+                        <a asp-controller="Home" asp-action="Index"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
+                        @* <a href="#welcome-section"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
+                        <a href="#service"><i class="fa fa-fw fa-globe"></i><span>Service</span></a> *@
+                        <a asp-controller="ResponsiveWebDesign" asp-action="Index"><i class="fa fa-fw fa-code"></i><span>Projects</span></a>
+                        @* <a href="#contact"><i class="fa fa-fw fa-envelope"></i><span>Contact</span></a> *@
+                    </div>
+                </navbar>
+            </div>
+        </header>
+
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
-    </header>
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
 </html>
