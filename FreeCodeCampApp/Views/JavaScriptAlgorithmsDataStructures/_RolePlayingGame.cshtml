@@ -249,6 +249,29 @@
     function fightDragon() {
         fighting = 2;
         goFight();
+
+        const dragonImages = [
+            '/img/dragon1.gif',
+            '/img/dragon2.gif',
+            '/img/dragon3.gif',
+            '/img/dragon4.gif',
+            '/img/dragon5.gif'
+        ];
+
+        const randomIndex = Math.floor(Math.random() * dragonImages.length);
+        const selectedDragon = dragonImages[randomIndex];
+
+        let dragonImageElement = document.getElementById('dragonImage');
+        if (!dragonImageElement) {
+            dragonImageElement = document.createElement('img');
+            dragonImageElement.id = 'dragonImage';
+            dragonImageElement.style.width = '200px';
+            dragonImageElement.style.display = 'block';
+            dragonImageElement.style.margin = '10px auto';
+            document.getElementById('text').appendChild(dragonImageElement);
+        }
+
+        dragonImageElement.src = selectedDragon;
     }
 
     function goFight() {
@@ -361,4 +384,5 @@
             }
         }
     }
+
 </script>
