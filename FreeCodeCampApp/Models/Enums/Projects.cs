@@ -45,5 +45,7 @@ namespace FreeCodeCampApp.Models.Enums
         GradebookApp = 18,
         [Display(Name = "Role Playing Game")]
         RolePlayingGame = 19,
+        [Display(Name = "Random Background Color Changer")]
+        RandomBackgroundColorChanger = 20,
     }
 }
