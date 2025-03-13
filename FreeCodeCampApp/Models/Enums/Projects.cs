@@ -47,5 +47,7 @@ namespace FreeCodeCampApp.Models.Enums
         RolePlayingGame = 19,
         [Display(Name = "Random Background Color Changer")]
         RandomBackgroundColorChanger = 20,
+        [Display(Name = "Calorie Counter")]
+        CalorieCounter = 21,
     }
 }

@@ -14,6 +14,7 @@ namespace FreeCodeCampApp.Controllers
                 Projects.GradebookApp => PartialView("_GradebookApp"),
                 Projects.RolePlayingGame => PartialView("_RolePlayingGame"),
                 Projects.RandomBackgroundColorChanger => PartialView("_RandomBackgroundColorChanger"),
+                Projects.CalorieCounter => PartialView("_CalorieCounter"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }
