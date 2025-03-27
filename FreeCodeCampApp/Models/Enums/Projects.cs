@@ -51,5 +51,7 @@ namespace FreeCodeCampApp.Models.Enums
         CalorieCounter = 21,
         [Display(Name = "Rock, Paper, Scissors Game")]
         RockPaperScissorsGame = 22,
+        [Display(Name = "Music Player")]
+        MusicPlayer = 23,
     }
 }
