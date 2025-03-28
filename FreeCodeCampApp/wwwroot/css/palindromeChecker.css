@@ -1,0 +1,134 @@
+﻿.custom-palindrome-checker {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #3b82f6 0%, #c7d9f5 100%);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: background 0.3s ease;
+}
+
+.container-palindrome-checker {
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.custom-palindrome-checker h1 {
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.custom-palindrome-checker label {
+    font-weight: 500;
+    text-align: left;
+}
+
+.custom-palindrome-checker input[type="text"] {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+    .custom-palindrome-checker input[type="text"]:focus {
+        border-color: #3b82f6;
+        outline: none;
+        box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+    }
+
+
+.custom-palindrome-checker button {
+    padding: 0.6rem;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+    .custom-palindrome-checker button:hover {
+        background-color: #2563eb;
+    }
+
+.custom-palindrome-checker footer {
+    margin-top: 2rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    border-top: 1px solid #ccc;
+}
+
+    .custom-palindrome-checker footer a {
+        color: #3b82f6;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .custom-palindrome-checker footer a:hover {
+            text-decoration: underline;
+        }
+
+.success,
+.error {
+    border-radius: 8px;
+    padding: 1rem;
+    box-sizing: border-box;
+    animation: pop 0.4s;
+    width: 100%;
+    color: #fff;
+}
+
+.success {
+    background-color: #01bd5f;
+}
+
+.error {
+    background-color: #f52a3b;
+}
+
+    .success p, .error p {
+        text-align: center;
+        font-weight: 400;
+        padding: 1em 0;
+    }
+
+        .success p span,
+        .error p span {
+            font-weight: 500;
+            font-style: italic;
+        }
+
+.info {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

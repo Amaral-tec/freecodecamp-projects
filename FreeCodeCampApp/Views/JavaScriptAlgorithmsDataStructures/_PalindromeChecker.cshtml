@@ -1,0 +1,76 @@
+﻿<link rel="stylesheet" href="~/css/palindromeChecker.css" asp-append-version="true" />
+<div class="modal-header">
+    <h5 class="modal-title" id="projectPalindromeChecker">Build a Palindrome Checker Project</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body custom-palindrome-checker">
+    <main class="container-palindrome-checker">
+        <h1>Palindrome Checker</h1>
+        <div class="input-area">
+            <label for="text-input">Enter a text:</label>
+            <input type="text" id="text-input" placeholder="Type here..." />
+            <button id="check-btn">Check</button>
+            <div id="result">
+                <p class="result-message">
+                    <span class="result-output"></span>
+                </p>
+            </div>
+        </div>
+        <div class="info">
+            <p>
+                <span>A palindrome is a word or phrase that reads the same forwards and backwards.</span>
+            </p>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>
+                All Rights Reserved. &copy; 2025
+                <a href="https://github.com/Amaral-tec">Amaral</a>
+            </p>
+        </div>
+    </footer>
+</div>
+
+<script>
+    const input = document.getElementById("text-input");
+    const checkBtn = document.getElementById("check-btn");
+    const resultContainer = document.getElementById("result");
+    const resultSpan = document.querySelector(".result-output");
+
+    checkBtn.addEventListener("click", () => {
+        const userInput = input.value.trim();
+
+        if (userInput === "") {
+            alert("Please input a value.");
+            return;
+        }
+
+        const isPalindrome = checkPalindrome(userInput);
+
+        resultContainer.classList.remove("success", "error");
+
+        void resultContainer.offsetWidth;
+
+        if (isPalindrome) {
+            resultContainer.classList.add("success");
+            resultSpan.textContent = `${userInput} is a palindrome.`;
+        } else {
+            resultContainer.classList.add("error");
+            resultSpan.textContent = `${userInput} is not a palindrome.`;
+        }
+    });
+
+    function checkPalindrome(str) {
+        const cleanStr = str
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/[^a-z0-9]/gi, "");
+
+        const reversedStr = cleanStr.split("").reverse().join("");
+
+        return cleanStr === reversedStr;
+    }
+
+</script>

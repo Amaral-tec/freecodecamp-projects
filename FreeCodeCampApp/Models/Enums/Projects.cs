@@ -53,5 +53,7 @@ namespace FreeCodeCampApp.Models.Enums
         RockPaperScissorsGame = 22,
         [Display(Name = "Music Player")]
         MusicPlayer = 23,
+        [Display(Name = "Palindrome Checker")]
+        PalindromeChecker = 24,
     }
 }
