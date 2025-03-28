@@ -1,5 +1,6 @@
 ﻿using FreeCodeCampApp.Models.Enums;
 using Microsoft.AspNetCore.Mvc;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace FreeCodeCampApp.Controllers
 {
@@ -18,6 +19,7 @@ namespace FreeCodeCampApp.Controllers
                 Projects.RockPaperScissorsGame => PartialView("_RockPaperScissorsGame"),
                 Projects.MusicPlayer => PartialView("_MusicPlayer"),
                 Projects.PalindromeChecker => PartialView("_PalindromeChecker"),
+                Projects.DateFormatter => PartialView("_DateFormatter"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }

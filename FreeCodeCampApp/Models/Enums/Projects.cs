@@ -55,5 +55,7 @@ namespace FreeCodeCampApp.Models.Enums
         MusicPlayer = 23,
         [Display(Name = "Palindrome Checker")]
         PalindromeChecker = 24,
+        [Display(Name = "Date Formatter")]
+        DateFormatter = 25
     }
 }
