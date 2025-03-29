@@ -20,8 +20,11 @@
     box-sizing: border-box;
 }
 
-.custom-music-player {
+.music-player-project {
     background-color: var(--app-background-color);
+}
+
+.custom-music-player {
     color: var(--primary-color);
     font-family: var(--font-family);
 }

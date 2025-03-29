@@ -12,9 +12,12 @@
     --yellow: #f1be32;
 }
 
+.date-formatter-project {
+    background-color: var(--dark-grey);
+}
+
 .custom-date-formatter {
     color: var(--white);
-    background-color: var(--dark-grey);
 }
 
 .title-container-date-formatter {

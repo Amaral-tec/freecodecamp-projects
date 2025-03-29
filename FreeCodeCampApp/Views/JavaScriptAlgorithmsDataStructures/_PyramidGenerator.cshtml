@@ -1,32 +1,68 @@
 ﻿<div class="modal-header">
-    <h5 class="modal-title" id="projectPyramidGenerator">Learn Introductory JavaScript by Building a Pyramid Generator</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <h5 class="modal-title" id="projectPyramidGenerator">
+    Learn Introductory JavaScript by Building a Pyramid Generator
+  </h5>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
-<div class="modal-body custom-pyramid-generator">
-    <div id="pyramid-output"></div>
 
+<div class="modal-body custom-pyramid-generator">
+  <div class="alert alert-info small" role="alert">
+    This project works with arrays, strings, functions, loops, if/else statements, and more.
+    <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#codeExample" aria-expanded="false" aria-controls="codeExample">
+      View Code
+    </button>
+  </div>
+
+  <div id="pyramid-output" class="mb-3 text-monospace"></div>
+
+  <div class="collapse" id="codeExample">
+    <div class="card card-body bg-light text-monospace">
+      <pre>
+          <code>
+const character = "!";
+const count = 10;
+const rows = [];
+let inverted = false;
+
+function padRow(rowNumber, rowCount) {
+    return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) 
+    + " ".repeat(rowCount - rowNumber);
+}
+
+for (let i = 1; i <= count; i++) {
+    if (inverted) {
+    rows.unshift(padRow(i, count));
+    } else {
+    rows.push(padRow(i, count));
+    }
+}
+
+let result = rows.join("\n");
+document.getElementById("pyramid-output").innerText = result;
+        </code>
+      </pre>
+    </div>
+  </div>
 </div>
 
 <script>
-    const character = "!";
-    const count = 10;
-    const rows = [];
-    let inverted = false;
+  const character = "!";
+  const count = 10;
+  const rows = [];
+  let inverted = false;
 
-    function padRow(rowNumber, rowCount) {
-        return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+  function padRow(rowNumber, rowCount) {
+    return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
+  }
+
+  for (let i = 1; i <= count; i++) {
+    if (inverted) {
+      rows.unshift(padRow(i, count));
+    } else {
+      rows.push(padRow(i, count));
     }
+  }
 
-    for (let i = 1; i <= count; i++) {
-        if (inverted) {
-            rows.unshift(padRow(i, count));
-        } else {
-            rows.push(padRow(i, count));
-        }
-    }
-
-    let result = rows.join("\n");
-
-    document.getElementById("pyramid-output").innerText = result;
+  let result = rows.join("\n");
+  document.getElementById("pyramid-output").innerText = result;
 </script>
-
