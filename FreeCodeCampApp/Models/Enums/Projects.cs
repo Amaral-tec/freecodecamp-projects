@@ -58,6 +58,8 @@ namespace FreeCodeCampApp.Models.Enums
         [Display(Name = "Date Formatter")]
         DateFormatter = 25,
         [Display(Name = "Football Team Cards")]
-        FootballTeamCards = 26
+        FootballTeamCards = 26,
+        [Display(Name = "Todo App")]
+        TodoApp = 27
     }
 }
