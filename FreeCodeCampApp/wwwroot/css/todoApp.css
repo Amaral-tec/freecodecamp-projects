@@ -43,7 +43,7 @@
     gap: 10px;
 }
 
-.btn {
+.btn-todo-project {
     cursor: pointer;
     width: 100px;
     margin: 10px;
@@ -54,7 +54,7 @@
     border-width: 3px;
 }
 
-    .btn:hover {
+    .btn-todo-project:hover {
         background-image: linear-gradient(#ffcc4c, #f89808);
     }
 

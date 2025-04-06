@@ -1,68 +1,97 @@
 ﻿<div class="modal-header">
-  <h5 class="modal-title" id="projectPyramidGenerator">
-    Learn Introductory JavaScript by Building a Pyramid Generator
-  </h5>
-  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <h5 class="modal-title" id="projectPyramidGenerator">
+        Learn Introductory JavaScript by Building a Pyramid Generator
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
 
 <div class="modal-body custom-pyramid-generator">
-  <div class="alert alert-info small" role="alert">
-    This project works with arrays, strings, functions, loops, if/else statements, and more.
-    <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#codeExample" aria-expanded="false" aria-controls="codeExample">
-      View Code
-    </button>
-  </div>
+    <div class="alert alert-info small" role="alert">
+        This project works with arrays, strings, functions, loops, if/else statements, and more.
+        <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#codeExample" aria-expanded="false" aria-controls="codeExample">
+            View Code
+        </button>
+    </div>
 
-  <div id="pyramid-output" class="mb-3 text-monospace"></div>
-
-  <div class="collapse" id="codeExample">
-    <div class="card card-body bg-light text-monospace">
-      <pre>
-          <code>
-const character = "!";
-const count = 10;
-const rows = [];
+    <div class="collapse" id="codeExample">
+        <div class="card card-body bg-light text-monospace">
+            <pre><code>
 let inverted = false;
 
-function padRow(rowNumber, rowCount) {
-    return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) 
-    + " ".repeat(rowCount - rowNumber);
-}
+    function generatePyramid(invert = false) {
+        const character = "!";
+        const count = 10;
+        const rows = [];
 
-for (let i = 1; i <= count; i++) {
-    if (inverted) {
-    rows.unshift(padRow(i, count));
-    } else {
-    rows.push(padRow(i, count));
+        function padRow(rowNumber) {
+            return " ".repeat(count - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(count - rowNumber);
+        }
+
+        for (let i = 1; i <= count; i++) {
+            const row = padRow(i);
+            invert ? rows.unshift(row) : rows.push(row);
+        }
+
+        return rows.join("\n");
     }
-}
 
-let result = rows.join("\n");
-document.getElementById("pyramid-output").innerText = result;
-        </code>
-      </pre>
+    function renderPyramid() {
+        document.getElementById("pyramid-text").innerText = generatePyramid(inverted);
+    }
+
+    function togglePyramid() {
+        inverted = !inverted;
+        renderPyramid();
+
+        const button = document.getElementById("toggleButton");
+        button.innerText = inverted ? "Normal Pyramid" : "Invert Pyramid";
+    }
+
+    renderPyramid();
+            </code></pre>
+        </div>
     </div>
-  </div>
+
+    <div id="pyramid-output" class="mt-2 text-monospace">
+        <pre id="pyramid-text"></pre>
+    </div>
+
+    <div class="d-grid">
+        <button id="toggleButton" class="btn btn-primary" onclick="togglePyramid()">Change direction of the Pyramid</button>
+    </div>
 </div>
 
 <script>
-  const character = "!";
-  const count = 10;
-  const rows = [];
-  let inverted = false;
+    let inverted = false;
 
-  function padRow(rowNumber, rowCount) {
-    return " ".repeat(rowCount - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(rowCount - rowNumber);
-  }
+    function generatePyramid(invert = false) {
+        const character = "!";
+        const count = 10;
+        const rows = [];
 
-  for (let i = 1; i <= count; i++) {
-    if (inverted) {
-      rows.unshift(padRow(i, count));
-    } else {
-      rows.push(padRow(i, count));
+        function padRow(rowNumber) {
+            return " ".repeat(count - rowNumber) + character.repeat(2 * rowNumber - 1) + " ".repeat(count - rowNumber);
+        }
+
+        for (let i = 1; i <= count; i++) {
+            const row = padRow(i);
+            invert ? rows.unshift(row) : rows.push(row);
+        }
+
+        return rows.join("\n");
     }
-  }
 
-  let result = rows.join("\n");
-  document.getElementById("pyramid-output").innerText = result;
+    function renderPyramid() {
+        document.getElementById("pyramid-text").innerText = generatePyramid(inverted);
+    }
+
+    function togglePyramid() {
+        inverted = !inverted;
+        renderPyramid();
+
+        const button = document.getElementById("toggleButton");
+        button.innerText = inverted ? "Uninvert Pyramid" : "Invert Pyramid";
+    }
+
+    renderPyramid();
 </script>

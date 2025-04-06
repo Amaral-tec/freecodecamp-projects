@@ -10,18 +10,9 @@
             View Code
         </button>
     </div>
-    <h1>Random Background Color changer</h1>
-    <div>
-        <section class="bg-information-container">
-            <p>Hex Code: <span id="bg-hex-code">#110815</span></p>
-        </section>
-
-        <button class="btn-project-random-color" id="btn">Change Background Color</button>
-    </div>
     <div class="collapse mt-2" id="codeExample">
         <div class="card card-body bg-light text-monospace">
-            <pre>
-                <codev>
+            <pre><codev>
 const darkColorsArr = [
     "#2C3E50",
     "#34495E",
@@ -52,8 +43,17 @@ function changeBackgroundColor() {
 const btn = document.querySelector("#btn");
 
 btn.onclick = changeBackgroundColor;
-                </codev>
-            </pre>
+            </codev></pre>
+        </div>
+    </div>
+    <div class="m-2">
+        <h1>Random Background Color changer</h1>
+        <div>
+            <section class="bg-information-container">
+                <p>Hex Code: <span id="bg-hex-code">#110815</span></p>
+            </section>
+
+            <button class="btn-project-random-color" id="btn">Change Background Color</button>
         </div>
     </div>
 </div>

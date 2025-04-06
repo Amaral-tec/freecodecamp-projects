@@ -12,8 +12,7 @@
     </div>
     <div class="collapse mt-2" id="codeExample">
         <div class="card card-body bg-light text-monospace">
-            <pre>
-            <codev>
+            <pre><codev>
 const taskForm = document.getElementById("task-form");
 const confirmCloseDialog = document.getElementById("confirm-close-dialog");
 const openTaskFormBtn = document.getElementById("open-task-form-btn");
@@ -142,14 +141,13 @@ taskForm.addEventListener("submit", (e) => {
 
   addOrUpdateTask();
 });
-                </codev>
-            </pre>
+            </codev></pre>
         </div>
     </div>
     <div class="custom-todo-app">
         <h1>Todo App</h1>
         <div class="todo-app">
-            <button id="open-task-form-btn" class="btn large-btn">
+            <button id="open-task-form-btn" class="btn-todo-project large-btn">
                 Add New Task
             </button>
             <form class="task-form hidden" id="task-form">
@@ -164,10 +162,10 @@ taskForm.addEventListener("submit", (e) => {
                     <label class="task-form-label" for="date-input">Date</label>
                     <input type="date" class="form-control" id="date-input" value="" />
                     <label class="task-form-label" for="description-input">Description</label>
-                    <textarea class="form-control" id="description-input" cols="30" rows="5"></textarea>
+                    <textarea class="form-control" id="description-input" cols="30" rows="3"></textarea>
                 </div>
                 <div class="task-form-footer">
-                    <button id="add-or-update-task-btn" class="btn large-btn" type="submit">
+                    <button id="add-or-update-task-btn" class="btn-todo-project large-btn" type="submit">
                         Add Task
                     </button>
                 </div>
@@ -176,10 +174,10 @@ taskForm.addEventListener("submit", (e) => {
                 <form method="dialog">
                     <p class="discard-message-text">Discard unsaved changes?</p>
                     <div class="confirm-close-dialog-btn-container">
-                        <button id="cancel-btn" class="btn">
+                        <button id="cancel-btn" class="btn-todo-project">
                             Cancel
                         </button>
-                        <button id="discard-btn" class="btn">
+                        <button id="discard-btn" class="btn-todo-project">
                             Discard
                         </button>
                     </div>
@@ -240,14 +238,14 @@ taskForm.addEventListener("submit", (e) => {
         taskData.forEach(
             ({ id, title, date, description }) => {
                 (tasksContainer.innerHTML += `
-            <div class="task" id="${id}">
-              <p><strong>Title:</strong> ${title}</p>
-              <p><strong>Date:</strong> ${date}</p>
-              <p><strong>Description:</strong> ${description}</p>
-              <button onclick="editTask(this)" type="button" class="btn">Edit</button>
-              <button onclick="deleteTask(this)" type="button" class="btn">Delete</button>
-            </div>
-          `)
+                <div class="task" id="${id}">
+                  <p><strong>Title:</strong> ${title}</p>
+                  <p><strong>Date:</strong> ${date}</p>
+                  <p><strong>Description:</strong> ${description}</p>
+                    <button onclick="editTask(this)" type="button" class="btn-todo-project">Edit</button>
+                    <button onclick="deleteTask(this)" type="button" class="btn-todo-project">Delete</button>
+                </div>
+              `)
             }
         );
     };

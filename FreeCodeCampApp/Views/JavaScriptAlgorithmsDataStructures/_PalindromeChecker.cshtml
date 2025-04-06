@@ -10,38 +10,9 @@
             View Code
         </button>
     </div>
-    <div class="custom-palindrome-checker">
-        <main class="container-palindrome-checker">
-            <h1>Palindrome Checker</h1>
-            <div class="input-area">
-                <label for="text-input">Enter a text:</label>
-                <input type="text" id="text-input" placeholder="Type here..." />
-                <button id="check-btn">Check</button>
-                <div id="result">
-                    <p class="result-message">
-                        <span class="result-output"></span>
-                    </p>
-                </div>
-            </div>
-            <div class="info">
-                <p>
-                    <span>A palindrome is a word or phrase that reads the same forwards and backwards.</span>
-                </p>
-            </div>
-        </main>
-        <footer>
-            <div>
-                <p>
-                    All Rights Reserved. &copy; 2025
-                    <a href="https://github.com/Amaral-tec">Amaral</a>
-                </p>
-            </div>
-        </footer>
-    </div>
     <div class="collapse mt-2" id="codeExample">
         <div class="card card-body bg-light text-monospace">
-            <pre>
-                <codev>
+            <pre><codev>
 const input = document.getElementById("text-input");
 const checkBtn = document.getElementById("check-btn");
 const resultContainer = document.getElementById("result");
@@ -81,9 +52,36 @@ function checkPalindrome(str) {
 
     return cleanStr === reversedStr;
 }
-                </codev>
-            </pre>
+            </codev></pre>
         </div>
+    </div>
+    <div class="custom-palindrome-checker">
+        <main class="container-palindrome-checker">
+            <h1>Palindrome Checker</h1>
+            <div class="input-area">
+                <label for="text-input">Enter a text:</label>
+                <input type="text" id="text-input" placeholder="Type here..." />
+                <button id="check-btn">Check</button>
+                <div id="result">
+                    <p class="result-message">
+                        <span class="result-output"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="info">
+                <p>
+                    <span>A palindrome is a word or phrase that reads the same forwards and backwards.</span>
+                </p>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <p>
+                    All Rights Reserved. &copy; 2025
+                    <a href="https://github.com/Amaral-tec">Amaral</a>
+                </p>
+            </div>
+        </footer>
     </div>
 </div>
 
