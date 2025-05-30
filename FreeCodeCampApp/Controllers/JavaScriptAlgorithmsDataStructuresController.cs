@@ -21,6 +21,7 @@ namespace FreeCodeCampApp.Controllers
                 Projects.DateFormatter => PartialView("_DateFormatter"),
                 Projects.FootballTeamCards => PartialView("_FootballTeamCards"),
                 Projects.TodoApp => PartialView("_TodoApp"),
+                Projects.BinaryConverter => PartialView("_BinaryConverter"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }

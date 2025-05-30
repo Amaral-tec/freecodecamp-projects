@@ -60,6 +60,8 @@ namespace FreeCodeCampApp.Models.Enums
         [Display(Name = "Football Team Cards")]
         FootballTeamCards = 26,
         [Display(Name = "Todo App")]
-        TodoApp = 27
+        TodoApp = 27,
+        [Display(Name = "Binary Converter")]
+        BinaryConverter = 28
     }
 }

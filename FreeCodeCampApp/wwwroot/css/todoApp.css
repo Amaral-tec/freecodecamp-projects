@@ -17,13 +17,13 @@
 .todo-app-project {
     background-color: var(--dark-grey);
 }
-
 .custom-todo-app {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 
 .custom-todo-app h1 {
     color: var(--light-grey);
