@@ -22,6 +22,7 @@ namespace FreeCodeCampApp.Controllers
                 Projects.FootballTeamCards => PartialView("_FootballTeamCards"),
                 Projects.TodoApp => PartialView("_TodoApp"),
                 Projects.BinaryConverter => PartialView("_BinaryConverter"),
+                Projects.RomanNumeralConverter => PartialView("_RomanNumeralConverter"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }

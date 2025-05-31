@@ -62,6 +62,8 @@ namespace FreeCodeCampApp.Models.Enums
         [Display(Name = "Todo App")]
         TodoApp = 27,
         [Display(Name = "Binary Converter")]
-        BinaryConverter = 28
+        BinaryConverter = 28,
+        [Display(Name = "Roman Numeral Converter")]
+        RomanNumeralConverter = 29
     }
 }
