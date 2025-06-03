@@ -64,6 +64,8 @@ namespace FreeCodeCampApp.Models.Enums
         [Display(Name = "Binary Converter")]
         BinaryConverter = 28,
         [Display(Name = "Roman Numeral Converter")]
-        RomanNumeralConverter = 29
+        RomanNumeralConverter = 29,
+        [Display(Name = "Spam Filter")]
+        SpamFilter = 30
     }
 }

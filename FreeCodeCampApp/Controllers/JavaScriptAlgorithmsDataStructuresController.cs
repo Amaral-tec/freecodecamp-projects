@@ -23,6 +23,7 @@ namespace FreeCodeCampApp.Controllers
                 Projects.TodoApp => PartialView("_TodoApp"),
                 Projects.BinaryConverter => PartialView("_BinaryConverter"),
                 Projects.RomanNumeralConverter => PartialView("_RomanNumeralConverter"),
+                Projects.SpamFilter => PartialView("_SpamFilter"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }

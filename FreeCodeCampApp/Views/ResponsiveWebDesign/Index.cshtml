@@ -80,6 +80,9 @@
                     <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject('@Module.JavaScriptAlgorithmsDataStructures', @((int)Projects.BinaryConverter))">Learn Recursion by Building a Decimal to Binary Converter</button>
                     <button type="button" class="list-group-item list-group-item-action list-group-item-info" onclick="OpenProject('@Module.JavaScriptAlgorithmsDataStructures', @((int)Projects.RomanNumeralConverter))">
                         <i class="bi bi-award me-1"></i> Certification Project: Build a Roman Numeral Converter Project
+                    </button>
+                    
+                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject('@Module.JavaScriptAlgorithmsDataStructures', @((int)Projects.SpamFilter))">Learn Regular Expressions by Building a Spam Filter</button>
                 </div>
             </div>
         </div>
@@ -98,14 +101,12 @@
 
 <script>
     function OpenProject(module, project) {
-        console.log(module);
         if (!module || !project) {
             toastr.warning("Módulo ou projeto inválido.");
             return;
         }
 
         const url = `/${module}/OpenProject?projects=${project}`;
-        console.log(url);
 
         $.get(url)
             .done(function (data) {
