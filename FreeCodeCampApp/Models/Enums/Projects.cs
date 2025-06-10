@@ -66,6 +66,8 @@ namespace FreeCodeCampApp.Models.Enums
         [Display(Name = "Roman Numeral Converter")]
         RomanNumeralConverter = 29,
         [Display(Name = "Spam Filter")]
-        SpamFilter = 30
+        SpamFilter = 30,
+        [Display(Name = "Number Sorter")]
+        NumberSorter = 31
     }
 }

@@ -57,7 +57,7 @@
     font-size: 1.1rem;
 }
 
-.btn {
+.btn-custom-spam-filter {
     display: block;
     cursor: pointer;
     width: 200px;
@@ -69,7 +69,7 @@
     border-width: 3px;
 }
 
-    .btn:hover {
+    .btn-custom-spam-filter:hover {
         background-image: linear-gradient(var(--yellow), var(--dark-orange));
     }
 
