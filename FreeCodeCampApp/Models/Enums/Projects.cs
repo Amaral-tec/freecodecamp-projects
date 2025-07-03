@@ -4,7 +4,7 @@ namespace FreeCodeCampApp.Models.Enums
 {
     public enum Projects
     {
-        //Responsive Web Design
+        #region Responsive Web Design
         [Display(Name = "Cat Photo App")]
         CatPhotoApp = 1,
         [Display(Name = "Cafe Menu")]
@@ -38,7 +38,9 @@ namespace FreeCodeCampApp.Models.Enums
         [Display(Name = "Penguin")]
         Penguin = 16,
 
-        //JavaScript Algorithms and Data Structures
+        #endregion
+
+        #region JavaScript Algorithms and Data Structures
         [Display(Name = "Pyramid Generator")]
         PyramidGenerator = 17,
         [Display(Name = "Gradebook App")]
@@ -68,6 +70,10 @@ namespace FreeCodeCampApp.Models.Enums
         [Display(Name = "Spam Filter")]
         SpamFilter = 30,
         [Display(Name = "Number Sorter")]
-        NumberSorter = 31
+        NumberSorter = 31,
+        [Display(Name = "Statistics Calculator")]
+        StatisticsCalculator = 32
+
+        #endregion
     }
 }
