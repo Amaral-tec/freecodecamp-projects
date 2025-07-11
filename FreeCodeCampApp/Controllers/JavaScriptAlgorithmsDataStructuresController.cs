@@ -26,6 +26,7 @@ namespace FreeCodeCampApp.Controllers
                 Projects.SpamFilter => PartialView("_SpamFilter"),
                 Projects.NumberSorter => PartialView("_NumberSorter"),
                 Projects.StatisticsCalculator => PartialView("_StatisticsCalculator"),
+                Projects.Spreadsheet => PartialView("_Spreadsheet"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }

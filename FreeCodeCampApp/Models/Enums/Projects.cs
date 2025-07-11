@@ -72,7 +72,9 @@ namespace FreeCodeCampApp.Models.Enums
         [Display(Name = "Number Sorter")]
         NumberSorter = 31,
         [Display(Name = "Statistics Calculator")]
-        StatisticsCalculator = 32
+        StatisticsCalculator = 32,
+        [Display(Name = "Spreadsheet")]
+        Spreadsheet = 33
 
         #endregion
     }
