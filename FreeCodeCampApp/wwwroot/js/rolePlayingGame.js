@@ -1,19 +1,4 @@
-﻿<link rel="stylesheet" href="~/css/rolePlayingGame.css" asp-append-version="true" />
-<div class="modal-header">
-    <h5 class="modal-title" id="projectRolePlayingGame">Learn Basic JavaScript by Building a Role Playing Game</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div class="modal-body custom-role-playing-game">
-    <div class="alert alert-info small" role="alert">
-        This project works with arrays, strings, objects, functions, loops, if/else statements, and more.
-        <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#codeExample" aria-expanded="false" aria-controls="codeExample">
-            View Code
-        </button>
-    </div>
-    <div class="collapse mt-2" id="codeExample">
-        <div class="card card-body bg-light text-monospace">
-            <pre><code>
-let xp = 0;
+﻿let xp = 0;
 let health = 100;
 let gold = 50;
 let currentWeapon = 0;
@@ -101,8 +86,7 @@ const locations = [
         name: "easter egg",
         "button text": ["2", "8", "Go to town square?"],
         "button functions": [pickTwo, pickEight, goTown],
-        text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen 
-        between 0 and 10. If the number you choose matches one of the random numbers, you win!"
+        text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
     }
 ];
 
@@ -325,30 +309,3 @@ function pick(guess) {
         }
     }
 }
-            </code></pre>
-        </div>
-    </div>
-    <div id="role-playing-game-output mt-2">
-        <div id="game">
-            <div id="stats">
-                <span class="stat">XP: <strong><span id="xpText">0</span></strong></span>
-                <span class="stat">Health: <strong><span id="healthText">100</span></strong></span>
-                <span class="stat">Gold: <strong><span id="goldText">50</span></strong></span>
-            </div>
-            <div id="controls">
-                <button id="button1" class="button-game">Go to store</button>
-                <button id="button2" class="button-game">Go to cave</button>
-                <button id="button3" class="button-game">Fight dragon</button>
-            </div>
-            <div id="monsterStats">
-                <span class="stat">Monster Name: <strong><span id="monsterName"></span></strong></span>
-                <span class="stat">Health: <strong><span id="monsterHealth"></span></strong></span>
-            </div>
-            <div id="text">
-                Welcome to Dragon Repeller. You must defeat the dragon that is preventing people from leaving the town. You are in the town square. Where do you want to go? Use the buttons above.
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="~/js/rolePlayingGame.js" asp-append-version="true"></script>

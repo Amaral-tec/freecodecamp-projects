@@ -1,0 +1,91 @@
+﻿:root {
+    --light-grey: #f5f6f7;
+    --dark-blue: #0a0a23;
+    --fcc-blue: #1b1b32;
+    --light-yellow: #fecc4c;
+    --dark-yellow: #feac32;
+    --light-pink: #ffadad;
+    --dark-red: #850000;
+    --light-green: #acd157;
+}
+
+.project {
+    background-color: var(--fcc-blue);
+}
+
+.custom-calorie-counter {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: var(--light-grey);
+}
+
+    .custom-calorie-counter h1 {
+        text-align: center;
+    }
+
+.container-calorie-counter {
+    width: 90%;
+    max-width: 680px;
+}
+
+.custom-calorie-counter h1,
+.container-calorie-counter,
+.output {
+    margin: 20px auto;
+}
+
+.custom-calorie-counter label,
+.custom-calorie-counter legend {
+    font-weight: bold;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-project {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--light-yellow);
+    border: 2px solid var(--dark-yellow);
+    min-height: 24px;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.custom-calorie-counter input,
+.custom-calorie-counter select {
+    min-height: 24px;
+    color: var(--dark-blue);
+}
+
+.custom-calorie-counter fieldset,
+.custom-calorie-counter label,
+.custom-calorie-counter input,
+.custom-calorie-counter select {
+    margin-bottom: 10px;
+}
+
+.output {
+    border: 2px solid var(--light-grey);
+    padding: 10px;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.output span {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.surplus {
+    color: var(--light-pink);
+}
+
+.deficit {
+    color: var(--light-green);
+}
