@@ -1,9 +1,10 @@
-﻿<div class="modal-header">
+﻿<link rel="stylesheet" href="~/css/catPhotoApp.css" asp-append-version="true" />
+<div class="modal-header">
     <h5 class="modal-title" id="projectCatPhoto">Learn HTML by Building a Cat Photo App</h5>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
-<div class="modal-body custom-cat">
-    <h3>Cat Photo App</h3>
+<div class="modal-body custom-cat-photo-app">
+    <h4>Cat Photo App</h4>
     <div>
         <h2>Cat Photos</h2>
         <p>Everyone loves <a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg">cute cats</a> online!</p>
@@ -11,7 +12,7 @@
         <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
     </div>
     <div>
-        <h3>Things cats love:</h3>
+        <h4>Things cats love:</h4>
         <ul>
             <li>Cat nip</li>
             <li>Laser pointers</li>
@@ -21,7 +22,7 @@
             <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
             <figcaption>Cats <em>love</em> lasagna.</figcaption>
         </figure>
-        <h3>Top 3 things cats hate:</h3>
+        <h4>Top 3 things cats hate:</h4>
         <ol>
             <li>Flea treatment</li>
             <li>Thunder</li>
@@ -58,117 +59,3 @@
     </div>
 </div>
 
-<style>
-    .custom-cat {
-        font-family: Arial, sans-serif;
-    }
-
-        .custom-cat h2,
-        .custom-cat h3 {
-            text-align: center;
-            color: #222;
-            margin-bottom: 15px;
-        }
-
-        .custom-cat p {
-            text-align: center;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .custom-cat a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-            .custom-cat a:hover {
-                color: #0056b3;
-                text-decoration: underline;
-            }
-
-        .custom-cat img {
-            display: block;
-            max-width: 100%;
-            border-radius: 10px;
-            margin: 15px auto;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-        }
-
-    ..custom-cat figure {
-        text-align: center;
-        margin: 15px 0;
-    }
-
-    ..custom-cat figcaption {
-        font-style: italic;
-        color: #666;
-        font-size: 14px;
-    }
-
-    .custom-cat ul, ol {
-        padding-left: 20px;
-        margin-bottom: 15px;
-    }
-
-    ..custom-cat fieldset {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 15px;
-        margin-bottom: 15px;
-        background: #f9f9f9;
-    }
-
-    .custom-cat legend {
-        font-weight: bold;
-        color: #444;
-        padding: 0 5px;
-    }
-
-    .custom-cat input[type="text"],
-    .custom-cat input[type="radio"],
-    .custom-cat input[type="checkbox"] {
-        cursor: pointer;
-    }
-
-    .custom-cat input[type="text"] {
-        width: calc(100% - 22px);
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #bbb;
-        border-radius: 5px;
-        display: block;
-        font-size: 14px;
-        transition: border-color 0.3s;
-    }
-
-        .custom-cat input[type="text"]:focus {
-            border-color: #007bff;
-            outline: none;
-        }
-
-    .custom-cat button {
-        width: 100%;
-        padding: 12px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s, transform 0.1s;
-    }
-
-        .custom-cat button:hover {
-            background-color: #0056b3;
-            transform: scale(1.02);
-        }
-
-    .custom-cat p:last-child {
-        text-align: center;
-        font-size: 14px;
-        color: #777;
-        margin-top: 20px;
-    }
-</style>

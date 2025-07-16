@@ -3,7 +3,9 @@
     ViewData["Title"] = "Projects";
 }
 
-<div class="hero">
+<div class="container">
+    <h1>.</h1>
+    <br />
     <h4>Projects</h4>
 
     <div class="accordion" id="accordionExample">
@@ -54,7 +56,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -73,7 +75,7 @@
                     <button type="button" class="list-group-item list-group-item-action list-group-item-info" onclick="OpenProject('@Module.JavaScriptAlgorithmsDataStructures', @((int)Projects.PalindromeChecker))">
                         <i class="bi bi-award me-1"></i> Certification Project: Build a Palindrome Checker
                     </button>
-                    
+
                     <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject('@Module.JavaScriptAlgorithmsDataStructures', @((int)Projects.DateFormatter))">Learn the Date Object by Building a Date Formatter</button>
                     <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject('@Module.JavaScriptAlgorithmsDataStructures', @((int)Projects.FootballTeamCards))">Learn Modern JavaScript Methods by Building Football Team Cards</button>
                     <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject('@Module.JavaScriptAlgorithmsDataStructures', @((int)Projects.TodoApp))">Learn localStorage by Building a Todo App</button>
@@ -81,7 +83,7 @@
                     <button type="button" class="list-group-item list-group-item-action list-group-item-info" onclick="OpenProject('@Module.JavaScriptAlgorithmsDataStructures', @((int)Projects.RomanNumeralConverter))">
                         <i class="bi bi-award me-1"></i> Certification Project: Build a Roman Numeral Converter Project
                     </button>
-                    
+
                     <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject('@Module.JavaScriptAlgorithmsDataStructures', @((int)Projects.SpamFilter))">Learn Regular Expressions by Building a Spam Filter</button>
                     <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject('@Module.JavaScriptAlgorithmsDataStructures', @((int)Projects.NumberSorter))">Learn Basic Algorithmic Thinking by Building a Number Sorter</button>
                     <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject('@Module.JavaScriptAlgorithmsDataStructures', @((int)Projects.StatisticsCalculator))">Learn Advanced Array Methods by Building a Statistics Calculator</button>
@@ -102,10 +104,12 @@
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject('@Module.FrontEndDevelopmentLibraries', @((int)Projects.BootstrapFluidContainers))">Bootstrap: Use Responsive Design with Bootstrap Fluid Containers</button>
+                    <button type="button" class="list-group-item list-group-item-action" onclick="OpenProject('@Module.FrontEndDevelopmentLibraries', @((int)Projects.BootstrapCreateCustomHeading))">Bootstrap: Create a Custom Heading</button>
                 </div>
             </div>
 
         </div>
+    </div>
 </div>
 
 <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">

@@ -5,17 +5,13 @@ namespace FreeCodeCampApp.Controllers
 {
     public class FrontEndDevelopmentLibrariesController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         [HttpGet]
         public IActionResult OpenProject(Projects projects)
         {
             return projects switch
             {
                 Projects.BootstrapFluidContainers => PartialView("_BootstrapFluidContainers"),
+                Projects.BootstrapCreateCustomHeading => PartialView("_BootstrapCreateCustomHeading"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }

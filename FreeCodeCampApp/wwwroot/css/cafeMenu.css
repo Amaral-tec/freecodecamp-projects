@@ -1,0 +1,101 @@
+﻿.custom-cafe-menu {
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    padding: 20px;
+}
+
+    .custom-cafe-menu h1 {
+        font-size: 40px;
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .custom-cafe-menu h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+.established {
+    font-style: italic;
+    text-align: center;
+}
+
+.custom-cafe-menu h1, h2, p {
+    text-align: center;
+}
+
+.menu-cafe {
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+}
+
+
+.custom-cafe-menu img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+}
+
+.custom-cafe-menu hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+}
+
+.bottom-line-cafe {
+    margin-top: 25px;
+}
+
+.title-cafe {
+    font-family: Impact, serif;
+}
+
+.item p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.flavor, .dessert {
+    text-align: left;
+    width: 75%;
+}
+
+.price {
+    text-align: right;
+    width: 25%;
+}
+
+/* FOOTER */
+
+.custom-cafe-menu footer {
+    font-size: 14px;
+}
+
+.address {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.custom-cafe-menu a {
+    color: black;
+}
+
+    .custom-cafe-menu a:visited {
+        color: black;
+    }
+
+    .custom-cafe-menu a:hover {
+        color: brown;
+    }
+
+    .custom-cafe-menu a:active {
+        color: brown;
+    }
+

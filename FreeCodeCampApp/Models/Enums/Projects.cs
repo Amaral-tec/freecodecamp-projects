@@ -97,6 +97,8 @@ namespace FreeCodeCampApp.Models.Enums
         #region Front End Development Libraries
         [Display(Name = "BootstrapFluidContainers")]
         BootstrapFluidContainers = 43,
+        [Display(Name = "BootstrapCreateCustomHeading")]
+        BootstrapCreateCustomHeading = 44,
 
         #endregion
     }
