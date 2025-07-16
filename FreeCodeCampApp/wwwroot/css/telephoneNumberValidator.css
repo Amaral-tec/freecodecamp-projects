@@ -1,0 +1,104 @@
+﻿.telephone-number-validator-project {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+.custom-number-validator {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+}
+
+.phone-container {
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    padding: 30px 25px;
+    max-width: 360px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+    .phone-container:hover {
+        transform: scale(1.02);
+    }
+
+.phone-background {
+    background: #111;
+    height: 60px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.phone-camera {
+    background: #444;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.custom-number-validator label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 12px;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+#user-input {
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+    #user-input:focus {
+        border-color: #4b7bec;
+    }
+
+#results-div {
+    min-height: 20px;
+    margin: 12px 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #20bf6b;
+}
+
+.phone-footer {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-styles {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #4b7bec, #45aaf2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+    .btn-styles:hover {
+        background: linear-gradient(135deg, #3867d6, #2d98da);
+        transform: translateY(-2px);
+    }

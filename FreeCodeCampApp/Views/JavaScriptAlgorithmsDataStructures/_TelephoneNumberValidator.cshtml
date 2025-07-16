@@ -1,0 +1,58 @@
+﻿<link rel="stylesheet" href="~/css/telephoneNumberValidator.css" asp-append-version="true" />
+<div class="modal-header">
+    <h5 class="modal-title" id="projectSpreadsheet">Build a Telephone Number Validator Project</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body telephone-number-validator-project">
+    <div class="alert alert-info small" role="alert">
+        This project focuses on validating US telephone numbers through interactive web interfaces. You'll implement input validation, apply regular expressions, handle DOM events, and provide real-time feedback to users. The project reinforces core JavaScript skills such as conditionals, pattern matching, and dynamic content updates based on user input.
+        <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#codeExample" aria-expanded="false" aria-controls="codeExample">
+            View Code
+        </button>
+    </div>
+    <div class="collapse mt-2" id="codeExample">
+        <div class="card card-body bg-light text-monospace">
+            <pre><codev>
+document.getElementById("check-btn").addEventListener("click", function () {
+    const input = document.getElementById("user-input").value;
+
+    if (input === "") {
+      alert("Please provide a phone number");
+      return;
+    }
+
+    const regex = /^(1\s?)?(\d{3}|\(\d{3}\))([\- ]?)\d{3}([\- ]?)\d{4}$/;
+
+    if (regex.test(input)) {
+      document.getElementById("results-div").textContent =
+        "Valid US number: " + input;
+    } else {
+      document.getElementById("results-div").textContent =
+        "Invalid US number: " + input;
+    }
+  });
+
+  document.getElementById("clear-btn").addEventListener("click", function () {
+    document.getElementById("results-div").textContent = "";
+    document.getElementById("user-input").value = "";
+  });
+            </codev></pre>
+        </div>
+    </div>
+    <div class="custom-number-validator">
+        <div class="phone-container">
+            <div class="phone-background">
+                <div class="phone-camera"></div>
+            </div>
+            <label for="user-input">Enter a Phone Number:</label>
+            <input maxlength="20" type="text" id="user-input" value="">
+            <div id="results-div"></div>
+            <div class="phone-footer">
+                <button class="btn-styles" id="check-btn">Check</button>
+                <button class="btn-styles" id="clear-btn">Clear</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/telephoneNumberValidator.js" asp-append-version="true"></script>
