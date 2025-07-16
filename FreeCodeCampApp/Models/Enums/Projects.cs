@@ -76,7 +76,27 @@ namespace FreeCodeCampApp.Models.Enums
         [Display(Name = "Spreadsheet")]
         Spreadsheet = 33,
         [Display(Name = "TelephoneNumberValidator")]
-        TelephoneNumberValidator = 34
+        TelephoneNumberValidator = 34,
+        [Display(Name = "ShoppingCart")]
+        ShoppingCart = 35,
+        [Display(Name = "PlatformerGame")]
+        PlatformerGame = 36,
+        [Display(Name = "DiceGame")]
+        DiceGame = 37,
+        [Display(Name = "CashRegister")]
+        CashRegister = 38,
+        [Display(Name = "Authors")]
+        Authors = 39,
+        [Display(Name = "ForumLeaderboard")]
+        ForumLeaderboard = 41,
+        [Display(Name = "SearchApp")]
+        SearchApp = 42,
+
+        #endregion
+
+        #region Front End Development Libraries
+        [Display(Name = "BootstrapFluidContainers")]
+        BootstrapFluidContainers = 43,
 
         #endregion
     }

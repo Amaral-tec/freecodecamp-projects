@@ -1,0 +1,126 @@
+﻿<div class="modal-header">
+    <h5 class="modal-title" id="projectBalanceSheet">
+        Bootstrap: Use Responsive Design with Bootstrap Fluid Containers
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
+<div class="modal-body">
+    <div class="container-fluid">
+        <div class="row align-items-center mb-4">
+            <div class="col-8">
+                <h2 class="text-primary text-center text-md-start fw-bold">CatPhotoApp</h2>
+            </div>
+            <div class="col-4 text-center text-md-end">
+                <a href="#">
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+                         alt="A cute orange cat lying on its back."
+                         class="img-fluid thick-green-border rounded-circle"
+                         style="max-width: 120px;" />
+                </a>
+            </div>
+        </div>
+
+        <div class="mb-4 text-center">
+            <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg"
+                 alt="Three kittens running towards the camera."
+                 class="img-fluid rounded"
+                 style="max-height: 300px; object-fit: cover;" />
+        </div>
+
+        <div class="row text-center mb-4 g-3">
+            <div class="col-12 col-sm-4">
+                <button class="btn btn-primary w-100">
+                    <i class="fa fa-thumbs-up me-2"></i> Like
+                </button>
+            </div>
+            <div class="col-12 col-sm-4">
+                <button class="btn btn-info w-100">
+                    <i class="fa fa-info-circle me-2"></i> Info
+                </button>
+            </div>
+            <div class="col-12 col-sm-4">
+                <button class="btn btn-danger w-100">
+                    <i class="fa fa-trash me-2"></i> Delete
+                </button>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <p class="mb-2 fs-5">
+                Things cats <span class="text-danger">love:</span>
+            </p>
+            <ul class="list-group list-group-flush mb-3" style="max-width: 350px;">
+                <li class="list-group-item px-0">Catnip</li>
+                <li class="list-group-item px-0">Laser pointers</li>
+                <li class="list-group-item px-0">Lasagna</li>
+            </ul>
+
+            <p class="mb-2 fs-5">Top 3 things cats hate:</p>
+            <ol class="ps-3" style="max-width: 350px;">
+                <li>Flea treatment</li>
+                <li>Thunder</li>
+                <li>Other cats</li>
+            </ol>
+        </div>
+
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+            <fieldset class="mb-3">
+                <legend class="h6 fw-semibold">Indoor or Outdoor?</legend>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="indoor-outdoor" id="indoor" />
+                            <label class="form-check-label" for="indoor">Indoor</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="indoor-outdoor" id="outdoor" />
+                            <label class="form-check-label" for="outdoor">Outdoor</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="mb-3">
+                <legend class="h6 fw-semibold">Personality Traits</legend>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="loving" name="personality" />
+                            <label class="form-check-label" for="loving">Loving</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="lazy" name="personality" />
+                            <label class="form-check-label" for="lazy">Lazy</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="crazy" name="personality" />
+                            <label class="form-check-label" for="crazy">Crazy</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="row g-2 align-items-center">
+                <div class="col-8">
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Cat photo URL"
+                           required
+                           aria-label="Cat photo URL" />
+                </div>
+                <div class="col-4 d-grid">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-paper-plane me-2"></i> Submit
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

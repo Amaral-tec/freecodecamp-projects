@@ -8,5 +8,7 @@ namespace FreeCodeCampApp.Models.Enums
         ResponsiveWebDesign = 1,
         [Display(Name = "JavaScript Algorithms and Data Structures")]
         JavaScriptAlgorithmsDataStructures = 2,
+        [Display(Name = "Front End Development Libraries")]
+        FrontEndDevelopmentLibraries = 3
     }
 }
