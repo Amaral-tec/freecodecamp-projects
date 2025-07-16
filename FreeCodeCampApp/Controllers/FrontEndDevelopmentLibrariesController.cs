@@ -12,6 +12,7 @@ namespace FreeCodeCampApp.Controllers
             {
                 Projects.BootstrapFluidContainers => PartialView("_BootstrapFluidContainers"),
                 Projects.BootstrapCreateCustomHeading => PartialView("_BootstrapCreateCustomHeading"),
+                Projects.JQueryScriptTagsDocumentReadyWork => PartialView("_JQueryScriptTagsDocumentReadyWork"),
                 _ => Json(new { error = true, mensagem = "Project not found!" }),
             };
         }

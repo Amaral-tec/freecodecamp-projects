@@ -99,6 +99,8 @@ namespace FreeCodeCampApp.Models.Enums
         BootstrapFluidContainers = 43,
         [Display(Name = "BootstrapCreateCustomHeading")]
         BootstrapCreateCustomHeading = 44,
+        [Display(Name = "JQueryScriptTagsDocumentReadyWork")]
+        JQueryScriptTagsDocumentReadyWork = 45,
 
         #endregion
     }
